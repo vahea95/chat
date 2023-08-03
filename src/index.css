@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.input {
+  padding: 16px 20px;
+}
+
+.inputButtons {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.inputMessage {
+  border: 1px solid;
+  padding: 8px 16px;
+  width: available;
+  align-items: center;
+  color: rgba(161, 159, 157, 1);
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
