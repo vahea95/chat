@@ -1,19 +1,22 @@
-import sendIcon from '../icons/sendIcon/sendIcon.svg'
-import attachIcon from '../icons/attachIcon/attachIcon.svg'
+import sendIcon from '../icons/sendIcon/sendIcon.svg';
 export const Input = () => {
-    return (
-        <div className="input">
-            <div className="inputMessage" contentEditable={true}>Type message</div>
-            <div className="inputButtons">
-                <div>
-                    <img src={attachIcon}></img>
-
-                </div>
-                <div>
-                    <img src={sendIcon}></img>
-                </div>
-            </div>
+  return (
+    <div className="input">
+      <div
+        className="inputMessage"
+        contentEditable={true}
+        role="textbox"
+        placeholder="Type message"
+      ></div>
+      <div className="inputButtons">
+        <label className="file-input-container">
+          <div className="attachIcon" />
+          <input type="file" />
+        </label>
+        <div className="sendIcon">
+          <img src={sendIcon}></img>
         </div>
-    )
-}
-
+      </div>
+    </div>
+  );
+};

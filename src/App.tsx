@@ -1,16 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Input} from "./Components/Input";
-import {Header} from "./Components/header";
+import { Messenger } from './Components/Messenger';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <Input/>
-        <Header/>
+      <Messenger />
     </div>
   );
-}
+};
 
 export default App;
