@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Loading } from './Loading';
-import { IChat } from '../Interfaces/IChat';
+import { IChat } from '../interfaces/IChat';
 import { dispatch, useAppSelector } from '../redux/hooks';
 import middleware from '../redux/messenger/middleware';
 import { Time } from './Time';

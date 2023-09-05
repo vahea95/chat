@@ -1,10 +1,10 @@
-import { ChatItemList } from './ChatItemList';
-import { Message } from './Message';
-import { Header } from './Header';
 import React from 'react';
-import { ChatItemListTitle } from './ChatItemListTitle';
-import { Input } from './Input';
 import { useAppSelector } from '../redux/hooks';
+import { ChatItemList } from './ChatItemList';
+import { ChatItemListTitle } from './ChatItemListTitle';
+import { Header } from './Header';
+import { Message } from './Message';
+import { Input } from './Input';
 
 export const Messenger = () => {
   const conversations = useAppSelector(

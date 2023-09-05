@@ -1,4 +1,4 @@
-import { ITime } from '../Interfaces/ITime';
+import { ITime } from '../interfaces/ITime';
 
 export const Time = (props: ITime) => {
   return (

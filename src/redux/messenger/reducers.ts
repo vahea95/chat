@@ -1,9 +1,9 @@
 import { SliceCaseReducers } from '@reduxjs/toolkit';
 import { IAction } from '../store';
-import { IConversations } from '../../Interfaces/IConversations';
-import { IMessenger } from '../../Interfaces/IMessenger';
-import { IChat } from '../../Interfaces/IChat';
+import { IMessenger } from '../../interfaces/IMessenger';
 import { secondsToDate } from '../../utils/dateUtils';
+import { IConversations } from '../../interfaces/IConversations';
+import { IChat } from '../../interfaces/IChat';
 
 const createReducer = <T extends SliceCaseReducers<IMessenger>>(
   reducer: T

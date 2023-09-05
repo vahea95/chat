@@ -1,4 +1,4 @@
-import { IMessenger } from '../../Interfaces/IMessenger';
+import { IMessenger } from '../../interfaces/IMessenger';
 
 export const getInitialState = (): IMessenger => ({
   chatUsers: null,

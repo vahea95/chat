@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Messenger } from './Components/Messenger';
+import { Messenger } from './components/Messenger';
 
 const App: React.FC = () => {
   return (

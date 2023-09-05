@@ -1,9 +1,9 @@
 import { Time } from './Time';
 import React from 'react';
 import { useAppSelector } from '../redux/hooks';
-import { IConversations } from '../Interfaces/IConversations';
-import { NewMessage } from './newMessage';
+import { IConversations } from '../interfaces/IConversations';
 import { secondsToDate, secondsToTime } from '../utils/dateUtils';
+import { NewMessage } from './newMessage';
 
 export const Message = () => {
   const conversations = useAppSelector(
@@ -11,11 +11,7 @@ export const Message = () => {
   );
 
   const lastNewMessage = conversations.find((conv: IConversations) => {
-    return conv.is_new ? conv.id : null;
-  });
-
-  const messageDate = conversations.find((conv: IConversations) => {
-    return conv.created_at ? conv.id : null;
+    return conv.is_new;
   });
 
   return (

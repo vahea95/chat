@@ -1,6 +1,6 @@
 import chatIcon from '../icons/chatiIcon/chatIcon.svg';
 import { useAppSelector } from '../redux/hooks';
-import { IChat } from '../Interfaces/IChat';
+import { IChat } from '../interfaces/IChat';
 export const Header = () => {
   const chatUsers = useAppSelector((state) => state.messenger.chatUsers);
   const activeChatId = useAppSelector((state) => state.messenger.activeChatID);
