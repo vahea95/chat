@@ -19,7 +19,6 @@ const getChatUsers = () => async (dispatch: AppDispatch) => {
 const getConversations = (id: string) => async (dispatch: AppDispatch) => {
   try {
     const response = await API.messenger.getIndividualChatMessages(id);
-    console.log(id);
     dispatch(setConversations(response.data.response));
   } catch (error) {
     throw error;

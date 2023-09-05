@@ -21,16 +21,16 @@ export const Message = () => {
   return (
     <>
       {conversations?.map((conversation: IConversations) => {
-        if (!conversation.user.you) {
-          return (
-            <div key={conversation.id}>
-              {lastNewMessage?.id === conversation.id ? <NewMessage /> : null}
-              {conversation.showDate ? (
-                <Time
-                  className="date"
-                  time={secondsToDate(conversation.created_at)}
-                />
-              ) : null}
+        return (
+          <div key={conversation.id}>
+            {lastNewMessage?.id === conversation.id ? <NewMessage /> : null}
+            {conversation.showDate ? (
+              <Time
+                className="date"
+                time={secondsToDate(conversation.created_at)}
+              />
+            ) : null}
+            {!conversation.user.you ? (
               <div className="message" key={conversation.id}>
                 <div className="avatar">
                   <img
@@ -55,18 +55,7 @@ export const Message = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        } else {
-          return (
-            <div key={conversation.id}>
-              {lastNewMessage?.id === conversation.id ? <NewMessage /> : null}
-              {conversation.showDate ? (
-                <Time
-                  className="date"
-                  time={secondsToDate(messageDate?.created_at)}
-                />
-              ) : null}
+            ) : (
               <div className="myMessage" key={conversation.id}>
                 <div className="myMessageText">
                   <div>{conversation.message}</div>
@@ -76,9 +65,9 @@ export const Message = () => {
                   />
                 </div>
               </div>
-            </div>
-          );
-        }
+            )}
+          </div>
+        );
       })}
     </>
   );

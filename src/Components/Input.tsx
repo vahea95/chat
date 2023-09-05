@@ -5,7 +5,7 @@ export const Input = () => {
       <div
         className="inputMessage"
         contentEditable={true}
-        role="textbox"
+        role="textBox"
         placeholder="Type message"
       ></div>
       <div className="inputButtons">

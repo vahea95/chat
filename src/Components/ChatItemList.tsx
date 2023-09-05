@@ -1,11 +1,10 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import { Loading } from './Loading';
 import { IChat } from '../Interfaces/IChat';
 import { dispatch, useAppSelector } from '../redux/hooks';
 import middleware from '../redux/messenger/middleware';
 import { Time } from './Time';
 import { secondsToTime } from '../utils/dateUtils';
-// import { msToTime } from '../utils/dateUtils';
 
 export const ChatItemList = () => {
   const chatUsers = useAppSelector((state) => state.messenger.chatUsers);
