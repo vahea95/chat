@@ -3,7 +3,7 @@ import { useAppSelector } from '../redux/hooks';
 import { ChatItemList } from './ChatItemList';
 import { ChatItemListTitle } from './ChatItemListTitle';
 import { Header } from './Header';
-import { Message } from './Message';
+import { Conversations } from './Conversations';
 import { Input } from './Input';
 
 export const Messenger = () => {
@@ -23,7 +23,7 @@ export const Messenger = () => {
           <div className="messageList">
             <Header />
             <div className="conversations">
-              <Message />
+              <Conversations />
             </div>
             <Input />
           </div>

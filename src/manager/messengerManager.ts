@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+const baseUrl = process.env.REACT_APP_API_URL;
+console.log(baseUrl);
 const messengerManager = {
   getAllChatUsers() {
-    return axios.get('https://api.lenzaos.com/chat.get?offset=0&limit=20', {
+    return axios.get(`${baseUrl}/chat.get?offset=0&limit=20`, {
       headers: {
         accept: 'application/json',
         version: '0.0',
@@ -11,15 +13,12 @@ const messengerManager = {
   },
 
   getIndividualChatMessages(id: string) {
-    return axios.get(
-      `https://api.lenzaos.com/message.get?chat_id=${id}&offset=0&limit=20`,
-      {
-        headers: {
-          accept: 'application/json',
-          version: '0.0',
-        },
-      }
-    );
+    return axios.get(`${baseUrl}/message.get?chat_id=${id}&offset=0&limit=20`, {
+      headers: {
+        accept: 'application/json',
+        version: '0.0',
+      },
+    });
   },
 };
 

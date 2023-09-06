@@ -111,25 +111,33 @@ code {
 }
 
 .message {
-  position: relative;
   display: flex;
-  gap: 8px;
   width: 50%;
-  padding: 15px;
-}
+  padding: 5px;
+  gap: 8px;
+  margin-right: auto;
 
-.messageText {
-  padding: 8px 12px;
-  background: rgba(243, 243, 243, 1);
-  border-radius: 4px;
 }
 
 .myMessage {
   display: flex;
-  float: right;
-  margin-left: auto;
-  padding: 15px;
+  justify-content: end;
+  padding: 5px;
   width: 50%;
+  float: right;
+}
+
+.userName {
+  margin-bottom: 5px;
+}
+
+.notMainMessage {
+  margin-left: 32px;
+}
+.messageText {
+  padding: 8px 12px;
+  background: rgba(243, 243, 243, 1);
+  border-radius: 4px;
 }
 
 .myMessageText {
