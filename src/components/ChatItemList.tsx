@@ -5,13 +5,14 @@ import { dispatch, useAppSelector } from '../redux/hooks';
 import middleware from '../redux/messenger/middleware';
 import { Time } from './Time';
 import { secondsToTime } from '../utils/dateUtils';
+import selector from '../redux/messenger/selector';
 
 export const ChatItemList = () => {
-  const chatUsers = useAppSelector((state) => state.messenger.chatUsers);
-  const activeId = useAppSelector((state) => state.messenger.activeChatID);
+  const chatUsers = useAppSelector(selector.chatUsers);
+  const activeId = useAppSelector(selector.activeChatID);
 
   const handleChatItemClick = (id: string) => {
-    dispatch(middleware.activeChatID(id));
+    dispatch(middleware.updateActiveChatID(id));
     dispatch(middleware.getConversations(id));
   };
 

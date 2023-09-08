@@ -5,11 +5,10 @@ import { ChatItemListTitle } from './ChatItemListTitle';
 import { Header } from './Header';
 import { Conversations } from './Conversations';
 import { Input } from './Input';
+import selector from '../redux/messenger/selector';
 
 export const Messenger = () => {
-  const conversations = useAppSelector(
-    (state) => state.messenger.conversations
-  );
+  const conversations = useAppSelector(selector.conversations);
 
   return (
     <>

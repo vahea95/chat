@@ -5,11 +5,10 @@ import React from 'react';
 import { useAppSelector } from '../redux/hooks';
 import { IConversations } from '../interfaces/IConversations';
 import { IMessage } from '../interfaces/IMessage';
+import selector from '../redux/messenger/selector';
 
 export const Message = (props: IMessage) => {
-  const conversations = useAppSelector(
-    (state) => state.messenger.conversations
-  );
+  const conversations = useAppSelector(selector.conversations);
 
   const lastNewMessage = conversations.find(
     (conv: IConversations) => conv.is_new

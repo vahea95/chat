@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { getEnvironmentalVariables } from '../utils/getEnvironmentalVariables';
 
-const baseUrl = process.env.REACT_APP_API_URL;
-console.log(baseUrl);
+const baseUrl = getEnvironmentalVariables().REACT_APP_API_URL;
+
 const messengerManager = {
   getAllChatUsers() {
     return axios.get(`${baseUrl}/chat.get?offset=0&limit=20`, {

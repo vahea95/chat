@@ -25,12 +25,12 @@ const getConversations = (id: string) => async (dispatch: AppDispatch) => {
   }
 };
 
-const activeChatID = (id: string) => async (dispatch: AppDispatch) => {
+const updateActiveChatID = (id: string) => async (dispatch: AppDispatch) => {
   dispatch(setActiveChatID(id));
 };
 
 export default {
   getConversations,
   getChatUsers,
-  activeChatID,
+  updateActiveChatID,
 };

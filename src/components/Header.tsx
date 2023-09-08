@@ -1,13 +1,15 @@
-import chatIcon from '../icons/chatiIcon/chatIcon.svg';
 import { useAppSelector } from '../redux/hooks';
 import { IChat } from '../interfaces/IChat';
+import { ReactComponent as ChatIcon } from '../icons/Chat.svg';
+import selector from '../redux/messenger/selector';
+
 export const Header = () => {
-  const chatUsers = useAppSelector((state) => state.messenger.chatUsers);
-  const activeChatId = useAppSelector((state) => state.messenger.activeChatID);
+  const chatUsers = useAppSelector(selector.chatUsers);
+  const activeChatId = useAppSelector(selector.activeChatID);
 
   return (
     <div className="header">
-      <img src={chatIcon} alt="chatIcon" className="chatIcon" />
+      <ChatIcon />
       <p>
         {chatUsers?.map((chat: IChat) => {
           return chat.id === activeChatId ? chat.title : null;

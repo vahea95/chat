@@ -3,20 +3,14 @@ import { createSelector } from '@reduxjs/toolkit';
 
 const selector = (state: RootState) => state.messenger;
 
-export const chatUsers = createSelector(
+const chatUsers = createSelector([selector], (state) => state.chatUsers);
+
+const conversations = createSelector(
   [selector],
-  (state) => state.messenger.chatUsers
+  (state) => state.conversations
 );
 
-export const conversations = createSelector(
-  [selector],
-  (state) => state.messenger.conversations
-);
-
-export const activeChatID = createSelector(
-  [selector],
-  (state) => state.messenger.activeChatID
-);
+const activeChatID = createSelector([selector], (state) => state.activeChatID);
 
 export default {
   chatUsers,

@@ -1,4 +1,5 @@
-import sendIcon from '../icons/sendIcon/sendIcon.svg';
+import { ReactComponent as SendIcon } from '../icons/Send.svg';
+import { ReactComponent as AttachIcon } from '../icons/Regular.svg';
 export const Input = () => {
   return (
     <div className="input">
@@ -7,14 +8,14 @@ export const Input = () => {
         contentEditable={true}
         role="textBox"
         placeholder="Type message"
-      ></div>
+      />
       <div className="inputButtons">
         <label className="file-input-container">
-          <div className="attachIcon" />
+          <AttachIcon className="attachIcon" />
           <input type="file" />
         </label>
         <div className="sendIcon">
-          <img src={sendIcon}></img>
+          <SendIcon />
         </div>
       </div>
     </div>
